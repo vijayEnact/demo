@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#b60031</color>
+    <color name="colorPrimaryDark">#b60031</color>
+    <color name="colorAccent">#b60031</color>
+
+    <color name="textHeadingColor">#b4b4b4</color>
+    <color name="textColor">@android:color/black</color>
+    <color name="textGrayColor">#b4b4b4</color>
+    <color name="textDarkGrayColor">#555555</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="redColor">#b60031</color>
+    <color name="cardBgColor">#fffcfc</color>
+    <color name="lightGrayColor">#E8E8E8</color>
+</resources>

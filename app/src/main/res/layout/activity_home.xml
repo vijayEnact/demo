@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:minHeight="?attr/actionBarSize"
+                android:background="@color/whiteColor"
+                android:fitsSystemWindows="true"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                android:contentInsetRight="0dp"
+                android:contentInsetEnd="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetEnd="0dp" >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/backImage"
+                        android:layout_width="?actionBarSize"
+                        android:layout_height="?actionBarSize"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:src="@drawable/back_arrow"
+                        android:padding="@dimen/_10sdp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/livvic_regular"
+                        android:text="@string/TXT_LBL_DASHBOARD"
+                        android:textColor="@color/redColor"
+
+                        android:textSize="@dimen/titleTextSize"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/myCartImage"
+                        app:layout_constraintStart_toEndOf="@+id/backImage"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.52"
+                        app:textAllCaps="true" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/searchImage"
+                        android:layout_width="?actionBarSize"
+                        android:layout_height="?actionBarSize"
+                        app:layout_constraintEnd_toStartOf="@+id/myCartImage"
+                        android:src="@drawable/search"
+                        android:padding="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/myCartImage"
+                        android:layout_width="?actionBarSize"
+                        android:layout_height="?actionBarSize"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/cart_icon"
+                        android:padding="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                android:background="@color/whiteColor"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/drawer_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="start">
+            <include layout="@layout/header"/>
+        </LinearLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

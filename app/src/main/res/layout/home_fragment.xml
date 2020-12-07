@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    android:padding="@dimen/_10sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bottleImage"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_180sdp"
+            android:src="@drawable/bottle_icon"
+            android:elevation="@dimen/_10sdp"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_20sdp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bannerCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:background="@drawable/product_card_rounded"
+
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="@dimen/cardContentPadding">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/bannerTittle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="Customer choice"
+                    android:textColor="@color/redColor"
+                    app:fontFamily="@font/livvic_medium"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="@dimen/text_size_14"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/subTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/bannerTittle"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Win Sparking"
+                    app:fontFamily="@font/livvic_medium"
+                    android:textColor="@color/textColor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="@dimen/text_size_12"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/subTitle"
+                    app:fontFamily="@font/livvic_regular"
+                    android:textSize="@dimen/text_size_10"
+                    android:textColor="@color/textColor"
+                    android:text="750 ml | Sparking white semi dry"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/txtQuantity"
+                    android:textColor="@color/redColor"
+                    android:text="20"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:layout_constraintStart_toStartOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wineries_text"
+            android:textColor="@color/textColor"
+            app:fontFamily="@font/livvic_medium"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintTop_toBottomOf="@+id/bannerCard"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewAllWineries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_all_text"
+            android:textColor="@color/redColor"
+            app:fontFamily="@font/livvic_medium"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintTop_toBottomOf="@+id/bannerCard"
+            android:layout_marginTop="@dimen/_10sdp"
+           app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/wineriesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/txt1"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wine_text"
+            android:textColor="@color/textColor"
+            app:fontFamily="@font/livvic_medium"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintTop_toBottomOf="@+id/wineriesList"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewAllWines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_all_text"
+            android:textColor="@color/redColor"
+            app:fontFamily="@font/livvic_medium"
+            android:textSize="@dimen/text_size_13"
+            app:layout_constraintTop_toBottomOf="@+id/wineriesList"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/wineList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewAllWines"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
+</layout>

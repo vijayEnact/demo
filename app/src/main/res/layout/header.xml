@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cardBgColor">
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/headerImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:background="@drawable/header_image"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileUser"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:src="@color/textGrayColor"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/whiteColor"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/text_size_13"
+        android:text="sssjhjshs"
+        android:fontFamily="@font/livvic_light"
+        app:layout_constraintStart_toEndOf="@+id/profileUser"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/userEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/text_size_13"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="vijay@gmail.com"
+        android:fontFamily="@font/livvic_light"
+        app:layout_constraintStart_toEndOf="@+id/profileUser"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+       app:layout_constraintTop_toBottomOf="@id/headerImage">
+        
+        
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/dash"
+            android:textSize="@dimen/text_size_13"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:fontFamily="@font/livvic_regular"
+            android:drawablePadding="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/TXT_LBL_DASHBOARD"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCatalogue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/catalog"
+            android:textSize="@dimen/text_size_13"
+            android:padding="@dimen/_8sdp"
+            android:fontFamily="@font/livvic_regular"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/txtDashboard"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/TXT_LBL_CATALOGUE"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtWineries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/win"
+            android:textSize="@dimen/text_size_13"
+            android:padding="@dimen/_8sdp"
+            android:fontFamily="@font/livvic_regular"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/txtCatalogue"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/TXT_LBL_WINERIES"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMyCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/cart"
+            android:textSize="@dimen/text_size_13"
+            android:padding="@dimen/_8sdp"
+            android:fontFamily="@font/livvic_regular"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/txtWineries"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/TXT_LBL_MY_CART"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMyOrders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/order"
+            android:textSize="@dimen/text_size_13"
+            android:padding="@dimen/_8sdp"
+            android:fontFamily="@font/livvic_regular"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/txtMyCart"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/TXT_LBL_MY_ORDERS"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMyAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/livvic_regular"
+            android:drawableStart="@drawable/address"
+            android:textSize="@dimen/text_size_13"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/txtMyOrders"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/TXT_LBL_MY_ADDRESS"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/payment"
+            android:textSize="@dimen/text_size_13"
+            android:padding="@dimen/_8sdp"
+            android:fontFamily="@font/livvic_regular"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/txtMyAddress"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/TXT_LBL_PAYMENTMETHOD"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtFaq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/faq"
+            android:textSize="@dimen/text_size_13"
+            android:padding="@dimen/_8sdp"
+            android:fontFamily="@font/livvic_regular"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/txtPaymentMethod"
+            android:drawablePadding="@dimen/_10sdp"
+            android:textColor="@color/textColor"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/TXT_LBL_FAQ"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/logout"
+        android:textSize="@dimen/text_size_13"
+        android:padding="@dimen/_8sdp"
+        android:fontFamily="@font/livvic_regular"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/TXT_LBL_LOGOUT"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

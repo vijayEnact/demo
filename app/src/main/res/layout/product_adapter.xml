@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/cardContentPadding"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/product_card_rounded"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="1"
+                android:numStars="5"
+                android:progressBackgroundTint="@color/textDarkGrayColor"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/productImage"
+                android:layout_width="@dimen/productImageWidth"
+                android:layout_height="@dimen/productImageHeight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/bottle"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar"/>
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtProductTittle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer choice"
+                android:textColor="@color/textColor"
+                app:fontFamily="@font/livvic_regular"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImage"
+                android:textSize="@dimen/text_size_12"/>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtProductType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtProductTittle"
+                android:text="Win Sparking"
+                android:layout_marginTop="@dimen/_2sdp"
+                app:fontFamily="@font/livvic_regular"
+                android:textColor="@color/textDarkGrayColor"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="@dimen/text_size_10"/>
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txtProductType"
+                android:textColor="@color/redColor"
+                android:text="20"
+                android:layout_marginTop="@dimen/_2sdp"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="12dp"
+
+                android:src="@drawable/add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtProductTittle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

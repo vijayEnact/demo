@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="screenPadding">@dimen/_10sdp</dimen>
+
+    //TextSize
+    <dimen name="titleTextSize">@dimen/_15sdp</dimen>
+    <dimen name="text_size_8">@dimen/_8sdp</dimen>
+    <dimen name="text_size_12">@dimen/_12sdp</dimen>
+    <dimen name="text_size_13">@dimen/_13sdp</dimen>
+    <dimen name="text_size_14">@dimen/_14sdp</dimen>
+    <dimen name="text_size_10">@dimen/_10sdp</dimen>
+
+    //EditText
+    <dimen name="editTextHeight">@dimen/_30sdp</dimen>
+    <dimen name="margin10">@dimen/_10sdp</dimen>
+    <dimen name="margin12">@dimen/_12sdp</dimen>
+
+    //Button
+    <dimen name="buttonHeight">@dimen/_40sdp</dimen>
+    <dimen name="buttonCornerRadious">@dimen/_12sdp</dimen>
+
+    //Card Padding
+    <dimen name="cardContentPadding">@dimen/_10sdp</dimen>
+
+    //ProductImage
+    <dimen name="productImageWidth">@dimen/_110sdp</dimen>
+    <dimen name="productImageHeight">@dimen/_80sdp</dimen>
+
+
+</resources>

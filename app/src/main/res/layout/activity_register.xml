@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.enact.app.activity.register.RegisterViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:padding="@dimen/screenPadding">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?actionBarSize"
+                    android:src="@drawable/login_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtCreate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?actionBarSize"
+                    android:fontFamily="@font/livvic_medium"
+                    android:text="@string/create_an_account_text"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/titleTextSize"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/logoImage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtlets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/livvic_regular"
+                    android:text="@string/lets_text"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_size_8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtCreate" />
+
+                <LinearLayout
+                    android:id="@+id/filedContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/txtlets">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/livvic_regular"
+                        android:text="@string/full_name_text"
+                        android:textColor="@color/textGrayColor"
+                        android:textSize="@dimen/text_size_8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtCreate" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/editFullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/editTextHeight"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/edit_bg"
+                        android:drawableStart="@drawable/full_name"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:inputType="text"
+                        android:text="@={viewModel.fullName}"
+                        error="@{viewModel.fullNameError}"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:fontFamily="@font/livvic_regular"
+                        android:text="@string/email_text"
+                        android:textColor="@color/textGrayColor"
+                        android:textSize="@dimen/text_size_8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtCreate" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/editEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/editTextHeight"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/edit_bg"
+                        android:drawableStart="@drawable/mail"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_12"
+                        android:text="@={viewModel.email}"
+                        error="@{viewModel.emailError}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:fontFamily="@font/livvic_regular"
+                        android:text="@string/phone_number_text"
+                        android:textColor="@color/textGrayColor"
+                        android:textSize="@dimen/text_size_8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtCreate" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/ediPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/editTextHeight"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/edit_bg"
+                        android:drawableStart="@drawable/phone_number"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:inputType="phone"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:textColor="@color/textColor"
+                        android:text="@={viewModel.phoneNumber}"
+                        error="@{viewModel.phoneNumberError}"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/livvic_regular"
+                        android:text="@string/password_text"
+                        android:textColor="@color/textGrayColor"
+                        android:textSize="@dimen/text_size_8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtCreate" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/editPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/editTextHeight"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/edit_bg"
+                        android:drawableStart="@drawable/password"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:inputType="textPassword"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:text="@={viewModel.password}"
+                        error="@{viewModel.passwordError}"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_marginTop="?actionBarSize"
+                    android:backgroundTint="@color/redColor"
+                    android:fontFamily="@font/livvic_medium"
+                    android:shadowRadius="5.0"
+                    android:text="@string/sign_up_text"
+                    android:onClick="@{()->viewModel.onRegisterClick()}"
+                    android:textAllCaps="true"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/text_size_12"
+                    app:cornerRadius="@dimen/buttonCornerRadious"
+                    app:layout_constraintTop_toBottomOf="@+id/filedContainer" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAlreadyAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/livvic_medium"
+            android:text="@string/already_have_account"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
